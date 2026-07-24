@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Text;
+
+namespace EmployeeImputedWinForms
+{
+    public static class CsvExport
+    {
+        public static void WriteSummary(string path, IEnumerable<SummaryExportRow> rows)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("LastName,FirstName,TotalImputedIncome");
+
+            foreach (var r in rows)
+            {
+                sb.AppendLine(string.Join(",",
+                    Esc(r.LastName),
+                    Esc(r.FirstName),
+                    Esc(r.TotalImputedIncome.ToString("0.00", CultureInfo.InvariantCulture))
+                ));
+            }
+
+            File.WriteAllText(path, sb.ToString(), Encoding.UTF8);
+        }
+
+        public static void WriteDetails(string path, IEnumerable<ResultRow> rows)
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine("LastName,FirstName,BirthDate,Relationship,AgeAsOf12_31,ImputedIncome");
+
+            foreach (var r in rows)
+            {
+                sb.AppendLine(string.Join(",",
+                    Esc(r.LastName),
+                    Esc(r.FirstName),
+                    Esc(r.BirthDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)),
+                    Esc(r.Relationship.ToString()),
+                    Esc(r.AgeAsOf12_31.ToString(CultureInfo.InvariantCulture)),
+                    Esc(r.ImputedIncome.ToString("0.00", CultureInfo.InvariantCulture))
+                ));
+            }
+
+            File.WriteAllText(path, sb.ToString(), Encoding.UTF8);
+        }
+
+        private static string Esc(string? s)
+        {
+            s ??= string.Empty;
+
+            // Escape quotes by doubling them
+            if (s.Contains('"'))
+                s = s.Replace("\"", "\"\"");
+
+            // Wrap in quotes if needed
+            if (s.Contains(',') || s.Contains('"') || s.Contains('\n') || s.Contains('\r'))
+                return $"\"{s}\"";
+
+            return s;
+        }
+    }
+}
