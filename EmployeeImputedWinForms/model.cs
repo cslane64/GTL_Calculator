@@ -12,7 +12,9 @@ public record CoveredPersonRow(
     string FirstName,
     DateTime BirthDate,
     Relationship Relationship,
+    int salary,
     int Months
+    // Add column for salary
 );
 
 public record ResultRow(

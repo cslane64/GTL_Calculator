@@ -22,7 +22,9 @@ namespace EmployeeImputedWinForms
             int idxFirst = IndexOfAny(header, "First", "FirstName", "First Name", "Given Name");
             int idxDob = IndexOfAny(header, "DOB", "BirthDate", "Birth Date", "DateOfBirth", "Date of Birth");
             int idxType = IndexOfAny(header, "Dependent type", "Relationship", "DependentType", "Type");
+            int idxSalary = IndexOfAny(header, "Salary", "Pay", "Compenstation", "Annual");
             int idxMonths = IndexOfAny(header, "Months", "Month", "NumberOf Months");
+            // added column for salary
 
             var rows = new List<CoveredPersonRow>();
 
@@ -42,7 +44,9 @@ namespace EmployeeImputedWinForms
                 string first = cols[idxFirst];
                 string dobText = cols[idxDob];
                 string typeText = cols[idxType];
+                string salaryText = cols[idxSalary];
                 string monthsText = cols[idxMonths];
+                // added string for salary
 
                 if (!DateTime.TryParse(dobText, CultureInfo.GetCultureInfo("en-US"),
                         DateTimeStyles.None, out var dob))
@@ -50,14 +54,21 @@ namespace EmployeeImputedWinForms
                     throw new InvalidOperationException($"Invalid DOB '{dobText}' on line {i + 1}.");
                 }
 
+                //added to convert text to int for salary
+                if (!int.TryParse(salaryText, out var salary))
+                {
+                    throw new InvalidOperationException($"Invalid Salary '{salaryText}' on line {i + 1}.");
+                }
+
                 if (!int.TryParse(monthsText, out var months))
                 {
                     throw new InvalidOperationException($"Invalid Months '{monthsText}' on line {i + 1}.");
                 }
+                                
 
                 var rel = ParseRelationship(typeText);
 
-                rows.Add(new CoveredPersonRow(last, first, dob, rel, months));
+                rows.Add(new CoveredPersonRow(last, first, dob, rel, salary, months)); // Add salary parameter
             }
 
             return rows;
@@ -74,7 +85,16 @@ namespace EmployeeImputedWinForms
                 decimal imputed = r.Relationship switch
                 {
                     Relationship.Employee =>
-                        ((250000m - 50000m) / 1000m) * GetAgeBandRate(age) * r.Months, // 200 * rate * months
+                    // if age is < 70
+                        // if salary is > 100,000 then this
+                            ((250000m - 50000m) / 1000m) * GetAgeBandRate(age) * r.Months, // 200 * rate * months
+                        // if salary is < 100,000 the ((salary * 2.5) - 50000m / 1000m) * GetAgebandRate(age) * r.Months (for salary below max 250,000)
+                    
+                    // if age is > 70 && age < 75
+                        // salary = salary * .65
+
+                   //if age > 75 
+                        // salary = salary * .45
 
                     // keep your existing placeholder logic for non-employees (or replace if you have real rules)
                     Relationship.Spouse =>

@@ -39,6 +39,7 @@ namespace EmployeeImputedWinForms
                     Esc(r.Relationship.ToString()),
                     Esc(r.AgeAsOf12_31.ToString(CultureInfo.InvariantCulture)),
                     Esc(r.ImputedIncome.ToString("0.00", CultureInfo.InvariantCulture))
+                    // Add computed salary
                 ));
             }
 
