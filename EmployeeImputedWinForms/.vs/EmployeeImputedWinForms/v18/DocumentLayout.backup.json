@@ -38,8 +38,7 @@
               "RelativeToolTip": "CsvExport.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-09T12:33:15.175Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-09T12:33:15.175Z"
             },
             {
               "$type": "Document",
@@ -47,9 +46,9 @@
               "Title": "ImputedCalculator.cs",
               "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\ImputedCalculator.cs",
               "RelativeDocumentMoniker": "ImputedCalculator.cs",
-              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\ImputedCalculator.cs",
-              "RelativeToolTip": "ImputedCalculator.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAIwEIAAAAQAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\ImputedCalculator.cs*",
+              "RelativeToolTip": "ImputedCalculator.cs*",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAuwGAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-09T12:16:52.896Z",
               "EditorCaption": ""
@@ -64,8 +63,7 @@
               "RelativeToolTip": "model.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-09T12:16:31.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-09T12:16:31.393Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-09T12:16:08.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-09T12:16:08.53Z"
             }
           ]
         }

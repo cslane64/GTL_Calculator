@@ -84,21 +84,11 @@ namespace EmployeeImputedWinForms
 
                 decimal imputed = r.Relationship switch
                 {
-                    Relationship.Employee =>
-                    // if age is < 70
-                        // if salary is > 100,000 then this
-                            ((250000m - 50000m) / 1000m) * GetAgeBandRate(age) * r.Months, // 200 * rate * months
-                        // if salary is < 100,000 the ((salary * 2.5) - 50000m / 1000m) * GetAgebandRate(age) * r.Months (for salary below max 250,000)
+                    Relationship.Employee => ComputeEmployeeImputed(r, age),
                     
-                    // if age is > 70 && age < 75
-                        // salary = salary * .65
-
-                   //if age > 75 
-                        // salary = salary * .45
-
-                    // keep your existing placeholder logic for non-employees (or replace if you have real rules)
                     Relationship.Spouse =>
                         (10000 / 1000m) * GetAgeBandRate(age) * r.Months, // 10 * rate * months
+
                     Relationship.Child =>
                         (5000m / 1000m) * GetAgeBandRate(age) * r.Months, // 5 * rate * months,
                     _ => 0m
@@ -115,6 +105,25 @@ namespace EmployeeImputedWinForms
                 );
             }).ToList();
         }
+
+        private static decimal ComputeEmployeeImputed(CoveredPersonRow r, int age)
+        {
+            // Cap salary at $250,000 for base calculation
+            decimal cappedSalary = Math.Min(r.salary, 250000m);
+
+            decimal baseAmount = cappedSalary > 100000m
+                ? ((250000m - 50000m) / 1000m) * GetAgeBandRate(age) * r.Months
+                : (((cappedSalary * 2.5m) - 50000m) / 1000m) * GetAgeBandRate(age) * r.Months;
+            if (age < 70)
+                return baseAmount;
+
+            if (age < 75)
+                return baseAmount * 0.65m;
+
+            return baseAmount * 0.45m;
+
+        }
+      
 
         private static decimal GetAgeBandRate(int age)
         {
