@@ -1,0 +1,5 @@
+C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\bin\Release\net8.0-windows\publish\EmployeeImputedWinForms.exe
+C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\bin\Release\net8.0-windows\publish\EmployeeImputedWinForms.dll
+C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\bin\Release\net8.0-windows\publish\EmployeeImputedWinForms.deps.json
+C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\bin\Release\net8.0-windows\publish\EmployeeImputedWinForms.runtimeconfig.json
+C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\bin\Release\net8.0-windows\publish\EmployeeImputedWinForms.pdb
