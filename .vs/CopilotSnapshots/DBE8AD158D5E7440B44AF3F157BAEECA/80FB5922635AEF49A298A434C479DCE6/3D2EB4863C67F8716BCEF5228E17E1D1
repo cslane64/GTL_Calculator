@@ -1,0 +1,95 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace EmployeeImputedWinForms
+{
+
+    public class StartupInfoForm : Form
+    {
+        public StartupInfoForm()
+        {
+            Text = "Employee Imputed Calculator Info Form";
+            StartPosition = FormStartPosition.CenterScreen;
+            Width = 2400;
+            Height = 1600;
+
+            var lbl = new Label
+            {
+                AutoSize = false,
+                Dock = DockStyle.Top,
+                Height = 100,
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                Text = "Please review this information before continuing."
+            };
+
+            var txtInfo = new TextBox
+            {
+                Multiline = true,
+                ScrollBars = ScrollBars.Vertical,
+                ReadOnly = true,
+                Width = 2100,
+                Height = 1100,
+                Left = 150,
+                Top = 150,
+                BorderStyle = BorderStyle.FixedSingle,
+                Font = new System.Drawing.Font("Segoe UI", 12F)
+            };
+
+            var btnContinue = new Button
+            {
+                Text = "Continue",
+                Width = 400,
+                Height = 80,
+                Left = 100,
+                Top = 1350
+            };
+            btnContinue.Click += BtnContinue_Click;
+
+            var btnExit = new Button
+            {
+                Text = "Exit",
+                Width = 400,
+                Height = 80,
+                Left = 1900,
+                Top = 1350
+            };
+            btnExit.Click += BtnExit_Click;
+
+            Controls.Add(lbl);
+            Controls.Add(txtInfo);
+            Controls.Add(btnContinue);
+            Controls.Add(btnExit);
+
+            AcceptButton = btnContinue;
+            CancelButton = btnExit;
+        }
+
+        private void BtnContinue_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form1 = new Form1();
+            form1.FormClosed += (s, args) => this.Close();
+            form1.Show();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // StartupInfoForm
+            // 
+            ClientSize = new Size(2221, 1252);
+            Name = "StartupInfoForm";
+            ResumeLayout(false);
+
+        }
+    }
+}
+

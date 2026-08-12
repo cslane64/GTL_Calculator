@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace EmployeeImputedWinForms
+{
+
+    public class StartupInfoForm : Form
+    {
+        public StartupInfoForm()
+        {
+            Text = "Information";
+            StartPosition = FormStartPosition.CenterScreen;
+            Width = 2400;
+            Height = 1600;
+
+            var lbl = new Label
+            {
+                AutoSize = false,
+                Dock = DockStyle.Top,
+                Height = 100,
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                Text = "Please review this information before continuing."
+            };
+
+            var btnContinue = new Button
+            {
+                Text = "Continue",
+                Width = 400,
+                Left = 90,
+                DialogResult = DialogResult.OK
+            };
+
+            var btnExit = new Button
+            {
+                Text = "Exit",
+                Width = 400,
+                Left = 210,
+                DialogResult = DialogResult.Cancel
+            };
+
+            Controls.Add(lbl);
+            Controls.Add(btnContinue);
+            Controls.Add(btnExit);
+
+            AcceptButton = btnContinue;
+            CancelButton = btnExit;
+        }
+
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // StartupInfoForm
+            // 
+            ClientSize = new Size(2221, 1252);
+            Name = "StartupInfoForm";
+            ResumeLayout(false);
+
+        }
+    }
+}
+

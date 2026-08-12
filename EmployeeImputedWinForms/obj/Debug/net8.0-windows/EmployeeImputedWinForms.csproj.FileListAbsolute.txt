@@ -47,3 +47,4 @@ C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\obj
 C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\obj\Debug\net8.0-windows\EmployeeImputedWinForms.pdb
 C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\obj\Debug\net8.0-windows\EmployeeImputedWinForms.genruntimeconfig.cache
 C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\obj\Debug\net8.0-windows\ref\EmployeeImputedWinForms.dll
+C:\Users\ChristopherLane\source\repos\GTL_Calculator\EmployeeImputedWinForms\obj\Debug\net8.0-windows\EmployeeImputedWinForms.StartupInfoForm.resources

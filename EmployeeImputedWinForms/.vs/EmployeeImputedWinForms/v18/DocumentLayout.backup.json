@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|c:\\users\\christopherlane\\source\\repos\\gtl_calculator\\employeeimputedwinforms\\imputedcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|solutionrelative:imputedcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|c:\\users\\christopherlane\\source\\repos\\gtl_calculator\\employeeimputedwinforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|c:\\users\\christopherlane\\source\\repos\\gtl_calculator\\employeeimputedwinforms\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|solutionrelative:model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|c:\\users\\christopherlane\\source\\repos\\gtl_calculator\\employeeimputedwinforms\\startupinfoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|solutionrelative:startupinfoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|c:\\users\\christopherlane\\source\\repos\\gtl_calculator\\employeeimputedwinforms\\csvexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|solutionrelative:csvexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|c:\\users\\christopherlane\\source\\repos\\gtl_calculator\\employeeimputedwinforms\\startupinfoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|solutionrelative:startupinfoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|c:\\users\\christopherlane\\source\\repos\\gtl_calculator\\employeeimputedwinforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|c:\\users\\christopherlane\\source\\repos\\gtl_calculator\\employeeimputedwinforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F95CB7D5-1264-4EF5-827B-A34FB862D31C}|EmployeeImputedWinForms.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CsvExport.cs",
-              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\CsvExport.cs",
-              "RelativeDocumentMoniker": "CsvExport.cs",
-              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\CsvExport.cs",
-              "RelativeToolTip": "CsvExport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAqAAAAAAAAAA==",
+              "Title": "StartupInfoForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\StartupInfoForm.cs",
+              "RelativeDocumentMoniker": "StartupInfoForm.cs",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\StartupInfoForm.cs [Design]",
+              "RelativeToolTip": "StartupInfoForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-09T12:33:15.175Z"
+              "WhenOpened": "2026-08-11T18:05:10.987Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ImputedCalculator.cs",
-              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\ImputedCalculator.cs",
-              "RelativeDocumentMoniker": "ImputedCalculator.cs",
-              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\ImputedCalculator.cs*",
-              "RelativeToolTip": "ImputedCalculator.cs*",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAuwGAAAAAlAAAAAAAAAA==",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAAGMAAAAAwszMzMwdwHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-09T12:16:52.896Z",
+              "WhenOpened": "2026-08-11T18:04:26.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "model.cs",
-              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\model.cs",
-              "RelativeDocumentMoniker": "model.cs",
-              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\model.cs",
-              "RelativeToolTip": "model.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-09T12:16:31.393Z"
+              "WhenOpened": "2026-08-11T18:04:18.993Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "StartupInfoForm.cs",
+              "DocumentMoniker": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\StartupInfoForm.cs",
+              "RelativeDocumentMoniker": "StartupInfoForm.cs",
+              "ToolTip": "C:\\Users\\ChristopherLane\\source\\repos\\GTL_Calculator\\EmployeeImputedWinForms\\StartupInfoForm.cs",
+              "RelativeToolTip": "StartupInfoForm.cs",
+              "ViewState": "AgIAAFYAAAAAmJmZmRkmwGoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-09T12:16:08.53Z"
+              "WhenOpened": "2026-08-11T17:50:59.077Z",
+              "EditorCaption": ""
             }
           ]
         }

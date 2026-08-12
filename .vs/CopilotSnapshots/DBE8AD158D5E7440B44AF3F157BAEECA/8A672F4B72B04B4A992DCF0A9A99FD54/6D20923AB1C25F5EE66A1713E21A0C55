@@ -1,0 +1,106 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection.Emit;
+using System.Windows.Forms;
+
+namespace EmployeeImputedWinForms
+{
+
+    public class StartupInfoForm : Form
+    {
+        public StartupInfoForm()
+        {
+            Text = "Employee Imputed Calculator Info Form";
+            StartPosition = FormStartPosition.CenterScreen;
+            Width = 2400;
+            Height = 1600;
+
+            var lbl = new Label
+            {
+                AutoSize = false,
+                Dock = DockStyle.Top,
+                Height = 100,
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                Text = "Please review this information before continuing."
+            };
+
+            var txtInfo = new TextBox
+• Calculates the taxable imputed income associated with employer-provided Group Term Life (GTL) insurance.
+• Uses the employee’s age, coverage amount, and applicable IRS rates to determine imputed income.
+• Calculates the portion of GTL coverage that may be subject to federal income and FICA taxes.
+• Applies the IRS Table 2-2 monthly cost rates based on the employee’s age:
+    • Under 25: $0.05 per $1,000 of coverage
+    • 25–29: $0.06 per $1,000
+    • 30–34: $0.08 per $1,000
+    • 35–39: $0.09 per $1,000
+    • 40–44: $0.10 per $1,000
+    • 45–49: $0.15 per $1,000
+    • 50–54: $0.23 per $1,000
+    • 55–59: $0.43 per $1,000
+    • 60–64: $0.66 per $1,000
+    • 65–69: $1.27 per $1,000
+    • 70 and older: $2.06 per $1,000
+• Accounts for the $50,000 tax-free GTL coverage threshold when calculating taxable imputed income.
+• Applies the applicable age-based coverage reduction:
+    • Age 70: coverage amount is reduced by 35%.
+    • Age 75: coverage amount is reduced by 55%.
+• Converts the calculated GTL value into the applicable imputed income amount for payroll purposes."
+            };
+
+            var btnContinue = new Button
+            {
+                Text = "Continue",
+                Width = 400,
+                Height = 80,
+                Left = 100,
+                Top = 1350
+            };
+            btnContinue.Click += BtnContinue_Click;
+
+            var btnExit = new Button
+            {
+                Text = "Exit",
+                Width = 400,
+                Height = 80,
+                Left = 1900,
+                Top = 1350
+            };
+            btnExit.Click += BtnExit_Click;
+
+            Controls.Add(lbl);
+            Controls.Add(txtInfo);
+            Controls.Add(btnContinue);
+            Controls.Add(btnExit);
+
+            AcceptButton = btnContinue;
+            CancelButton = btnExit;
+        }
+
+        private void BtnContinue_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form1 = new Form1();
+            form1.FormClosed += (s, args) => this.Close();
+            form1.Show();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // StartupInfoForm
+            // 
+            ClientSize = new Size(2221, 1252);
+            Name = "StartupInfoForm";
+            ResumeLayout(false);
+
+        }
+    }
+}
+
