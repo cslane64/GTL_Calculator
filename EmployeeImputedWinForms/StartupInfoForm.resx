@@ -117,4 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblInfo.Text" xml:space="preserve">
+    <value>
+• Ensure that the .csv file is properly formatted. Headings should be LastName, FirstName, DOB, Relationship, Salary, Months.
+
+• The Salary field must have a value in it. Employees salary field should reflect their actual salary. All others MUST have a 0.
+
+• Ensure that the rates listed are current according to the IRS Table 2-2: If not, contact the developer to have then updated.
+    • Under 25: $0.05 per $1,000 of coverage
+    • 25–29: $0.06 per $1,000
+    • 30–34: $0.08 per $1,000
+    • 35–39: $0.09 per $1,000
+    • 40–44: $0.10 per $1,000
+    • 45–49: $0.15 per $1,000
+    • 50–54: $0.23 per $1,000
+    • 55–59: $0.43 per $1,000
+    • 60–64: $0.66 per $1,000
+    • 65–69: $1.27 per $1,000
+    • 70 and older: $2.06 per $1,000
+
+• Accounts for the $50,000 tax-free GTL coverage threshold when calculating taxable imputed income.
+
+• Applies the applicable age-based coverage reduction:
+    • Age 70: coverage amount is reduced by 35%.
+    • Age 75: coverage amount is reduced by 55%. 
+
+Copyright © 2026 Christopher Lane. All rights reserved.
+This software was independently developed by Christopher Lane on personal time exclusively for the use and benefit of the
+Multistate Tax Commission. All rights, title, and interest in the software, including applicable intellectual property rights, 
+are owned by Christopher Lane, subject to any applicable written agreements between the parties.
+	</value>
+  </data>
 </root>

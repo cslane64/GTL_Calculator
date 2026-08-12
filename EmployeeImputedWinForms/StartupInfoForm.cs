@@ -33,6 +33,7 @@ namespace EmployeeImputedWinForms
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartupInfoForm));
             lblHeader = new Label();
             lblInfo = new Label();
             btnContinue = new Button();
@@ -41,82 +42,55 @@ namespace EmployeeImputedWinForms
             // 
             // lblHeader
             // 
-            lblHeader.AutoSize = false;
             lblHeader.Dock = DockStyle.Top;
-            lblHeader.Height = 100;
-            lblHeader.Font = new System.Drawing.Font("Segoe UI", 18F);
-            lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            lblHeader.Text = "Please review this information before continuing.";
+            lblHeader.Font = new Font("Segoe UI", 18F);
+            lblHeader.Location = new Point(0, 0);
             lblHeader.Name = "lblHeader";
+            lblHeader.Size = new Size(2400, 100);
+            lblHeader.TabIndex = 0;
+            lblHeader.Text = "Please review this information before continuing.";
+            lblHeader.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblInfo
             // 
-            lblInfo.AutoSize = false;
-            lblInfo.Width = 2100;
-            lblInfo.Height = 1200;
-            lblInfo.Left = 150;
-            lblInfo.Top = 150;
             lblInfo.BorderStyle = BorderStyle.FixedSingle;
-            lblInfo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            lblInfo.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            lblInfo.Font = new Font("Segoe UI", 10F);
+            lblInfo.Location = new Point(150, 100);
             lblInfo.Name = "lblInfo";
-            lblInfo.Text = @"• Calculates the portion of GTL coverage that may be subject to federal income tax.
-
-• Ensure that the .csv file is properly formatted. Headings should be LastName, FirstName, DOB, Relationship, Salary, Months.
-
-• The Salary field must have a value in it. Employees salary field should reflect their actual salary. All others MUST have a 0.
-
-• Ensure that the rates listed are current according to the IRS Table 2-2: If not, contact the developer to have then updated.
-    • Under 25: $0.05 per $1,000 of coverage
-    • 25–29: $0.06 per $1,000
-    • 30–34: $0.08 per $1,000
-    • 35–39: $0.09 per $1,000
-    • 40–44: $0.10 per $1,000
-    • 45–49: $0.15 per $1,000
-    • 50–54: $0.23 per $1,000
-    • 55–59: $0.43 per $1,000
-    • 60–64: $0.66 per $1,000
-    • 65–69: $1.27 per $1,000
-    • 70 and older: $2.06 per $1,000
-
-• Accounts for the $50,000 tax-free GTL coverage threshold when calculating taxable imputed income.
-
-• Applies the applicable age-based coverage reduction:
-    • Age 70: coverage amount is reduced by 35%.
-    • Age 75: coverage amount is reduced by 55%.";
+            lblInfo.Size = new Size(2115, 1348);
+            lblInfo.TabIndex = 1;
+            lblInfo.Text = resources.GetString("lblInfo.Text");
             // 
             // btnContinue
             // 
-            btnContinue.Text = "Continue";
-            btnContinue.Width = 400;
-            btnContinue.Height = 80;
-            btnContinue.Left = 150;
-            btnContinue.Top = 1375;
+            btnContinue.Location = new Point(150, 1495);
             btnContinue.Name = "btnContinue";
+            btnContinue.Size = new Size(400, 80);
+            btnContinue.TabIndex = 2;
+            btnContinue.Text = "Continue";
             btnContinue.Click += BtnContinue_Click;
             // 
             // btnExit
             // 
-            btnExit.Text = "Exit";
-            btnExit.Width = 400;
-            btnExit.Height = 80;
-            btnExit.Left = 1850;
-            btnExit.Top = 1375;
+            btnExit.Location = new Point(1865, 1495);
             btnExit.Name = "btnExit";
+            btnExit.Size = new Size(400, 80);
+            btnExit.TabIndex = 3;
+            btnExit.Text = "Exit";
             btnExit.Click += BtnExit_Click;
             // 
             // StartupInfoForm
             // 
-            ClientSize = new System.Drawing.Size(2400, 1600);
-            Text = "Employee Imputed Calculator Info Form";
-            StartPosition = FormStartPosition.CenterScreen;
-            Name = "StartupInfoForm";
             AcceptButton = btnContinue;
             CancelButton = btnExit;
+            ClientSize = new Size(2400, 1600);
             Controls.Add(lblHeader);
             Controls.Add(lblInfo);
             Controls.Add(btnContinue);
             Controls.Add(btnExit);
+            Name = "StartupInfoForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Employee Imputed Calculator Info Form";
             ResumeLayout(false);
         }
     }

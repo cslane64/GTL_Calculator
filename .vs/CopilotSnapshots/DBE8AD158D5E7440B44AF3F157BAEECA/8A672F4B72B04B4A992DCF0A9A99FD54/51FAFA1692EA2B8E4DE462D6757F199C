@@ -22,7 +22,7 @@ public record ResultRow(
     string FirstName,
     DateTime BirthDate,
     Relationship Relationship,
-    int Age_As_Of_12_31,
+    int AgeAsOf12_31,
     int Months,
     decimal ImputedIncome
 );

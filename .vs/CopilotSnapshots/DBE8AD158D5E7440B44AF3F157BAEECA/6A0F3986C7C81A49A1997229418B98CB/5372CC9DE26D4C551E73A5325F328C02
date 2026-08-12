@@ -28,7 +28,7 @@ namespace EmployeeImputedWinForms
         public static void WriteDetails(string path, IEnumerable<ResultRow> rows)
         {
             var sb = new StringBuilder();
-            sb.AppendLine("LastName,FirstName,BirthDate,Relationship,Age_As_Of_12_31,ImputedIncome");
+            sb.AppendLine("LastName,FirstName,BirthDate,Relationship,AgeAsOf12_31,ImputedIncome");
 
             foreach (var r in rows)
             {
@@ -37,7 +37,7 @@ namespace EmployeeImputedWinForms
                     Esc(r.FirstName),
                     Esc(r.BirthDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)),
                     Esc(r.Relationship.ToString()),
-                    Esc(r.Age_As_Of_12_31.ToString(CultureInfo.InvariantCulture)),
+                    Esc(r.AgeAsOf12_31.ToString(CultureInfo.InvariantCulture)),
                     Esc(r.ImputedIncome.ToString("0.00", CultureInfo.InvariantCulture))
                     // Add computed salary
                 ));
