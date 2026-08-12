@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace EmployeeImputedWinForms
+{
+
+    public partial class StartupInfoForm : Form
+    {
+        private Label lblHeader;
+        private Label lblInfo;
+        private Button btnContinue;
+        private Button btnExit;
+
+        public StartupInfoForm()
+        {
+            InitializeComponent();
+        }
+
+        private void BtnContinue_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form1 = new Form1();
+            form1.FormClosed += (s, args) => this.Close();
+            form1.Show();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void InitializeComponent()
+        {
+            SuspendLayout();
+            // 
+            // StartupInfoForm
+            // 
+            ClientSize = new Size(2221, 1252);
+            Name = "StartupInfoForm";
+            ResumeLayout(false);
+
+        }
+    }
+}
+

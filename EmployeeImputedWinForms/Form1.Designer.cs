@@ -34,6 +34,7 @@
             btnExportSummary = new Button();
             btnExportDetails = new Button();
             btnExit = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)nudYear).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridResults).BeginInit();
             SuspendLayout();
@@ -103,11 +104,21 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += button1_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(1553, 106);
+            label1.Name = "label1";
+            label1.Size = new Size(210, 41);
+            label1.TabIndex = 6;
+            label1.Text = "Select Tax Year";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2329, 1369);
+            Controls.Add(label1);
             Controls.Add(btnExit);
             Controls.Add(btnExportDetails);
             Controls.Add(btnExportSummary);
@@ -120,6 +131,7 @@
             ((System.ComponentModel.ISupportInitialize)nudYear).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridResults).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -130,5 +142,6 @@
         private Button btnExportSummary;
         private Button btnExportDetails;
         private Button btnExit;
+        private Label label1;
     }
 }
