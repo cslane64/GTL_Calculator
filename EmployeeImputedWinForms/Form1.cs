@@ -13,7 +13,18 @@ namespace EmployeeImputedWinForms
         public Form1()
         {
             InitializeComponent();
+            var screen = Screen.FromControl(this);
+            int width = (int)(screen.WorkingArea.Width * 0.6);   // 60% of screen width
+            int height = (int)(screen.WorkingArea.Height * 0.6); // 60% of screen height
+
+            this.Size = new System.Drawing.Size(width, height);
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             nudYear.Value = DateTime.Today.Year;
+
+            
+
+
         }
 
         private void btnImportCsv_Click(object sender, EventArgs e)
